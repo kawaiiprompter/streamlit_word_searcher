@@ -65,7 +65,7 @@ def main():
     
     st.markdown("## search word in wd14-tagger & CLIP Interrogator")
     movements, mediums, flavors, danbooru_tags = load_cache()
-    search_word = st.text_input("検索ワード")
+    search_word = st.text_input("検索ワード").lower()
     max_size = st.selectbox("表示最大数", [20, 100, 200, 500, 1000])
 
     labels = [
